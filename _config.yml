@@ -1,0 +1,52 @@
+# Site settings
+title: Your Name
+description: A minimal personal site and blog
+url: "https://gudetimes1234.github.io"
+baseurl: ""
+
+# Author information
+author:
+  name: Your Name
+  bio: A brief bio about yourself goes here. One or two sentences describing who you are and what you do.
+  github: gudetimes1234
+  linkedin: your-linkedin-username
+
+# Theme
+remote_theme: chesterhow/tale
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog
+
+# Permalinks
+permalink: /blog/:year/:month/:day/:title
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Plugins
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - semantic
+  - semantic.json
+  - README.md
