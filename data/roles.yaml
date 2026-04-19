@@ -1,0 +1,24 @@
+- dates: "2025 — Now"
+  company: "Flock Safety"
+  role: "Senior Software Engineer"
+  description: "Refactoring legacy Airflow DAGs, integrating new data sources, and making the pipelines run faster and fail less often."
+
+- dates: "2024"
+  company: "Trial by Fire Solutions"
+  role: "Senior Software Engineer"
+  description: "Building clinical data integrations across a bunch of messy formats (JSON, XML, CSV, ODM), and designing the API v2 transition."
+
+- dates: "2021 — 2023"
+  company: "Promoboxx"
+  role: "Software Engineer"
+  description: "Go microservices, Kinesis streaming, DynamoDB, and a Stripe payments rebuild. Transitioned REST endpoints to GraphQL along the way."
+
+- dates: "2018 — 2020"
+  company: "One Legal"
+  role: "Software Engineer"
+  description: "Rebuilt data models and request flows in a C# monolith, dropping latency by up to 90%. Cleaned up the React frontend too."
+
+- dates: "2014 — 2018"
+  company: "Evidation Health"
+  role: "Software Engineer"
+  description: "Backend microservices for a healthcare analytics platform. Grew from junior to mid here. Python, Flask, Rails, lots of SQL."

@@ -1,7 +1,9 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-Gemfile.lock
-vendor/
-.bundle/
+public/
+resources/
+.hugo_build.lock
+.DS_Store
+.vercel
+.env
+.env.local
+node_modules/
+*.log

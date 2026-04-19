@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ .Site.Title }}</title>
+<meta name="description" content="{{ .Site.Params.description }}">
+
+<style>
+:root {
+  --ink: #0f0f0f;
+  --muted: #6b6b6b;
+  --rule: #e5e5e5;
+  --paper: #fafafa;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  font-size: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 32px;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.003em;
+}
+
+@media (max-width: 640px) {
+  body { padding: 48px 24px; font-size: 15px; }
+}
+
+h1 {
+  font-size: 2.25em;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin: 32px 0 14px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 0.75em;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 28px;
+}
+
+h3 {
+  font-size: 0.75em;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 28px;
+  color: var(--muted);
+}
+
+h3 a { color: inherit; border-bottom: none; }
+h3 a:hover { color: var(--ink); }
+
+h4 {
+  font-size: 1.05em;
+  font-weight: 400;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+}
+
+hr {
+  height: 1px;
+  padding: 0;
+  margin: 36px 0;
+  background-color: var(--rule);
+  border: 0;
+}
+
+p { margin: 0 0 16px; }
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: border-color 0.15s ease;
+}
+
+a:hover { border-bottom-color: var(--ink); }
+
+strong { font-weight: 500; }
+
+.contact {
+  font-size: 0.9em;
+  color: var(--muted);
+  margin-top: 28px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact a {
+  color: var(--ink);
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.contact a:hover { border-bottom-color: var(--ink); }
+
+.role {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  align-items: baseline;
+}
+
+@media (max-width: 560px) {
+  .role { grid-template-columns: 1fr; gap: 4px; }
+}
+
+.role:last-of-type { border-bottom: none; }
+
+.role-dates {
+  color: var(--muted);
+  font-size: 0.85em;
+  font-variant-numeric: tabular-nums;
+}
+
+.role-body strong { font-weight: 500; }
+.role-body .company { color: var(--ink); }
+
+.role-body .desc {
+  display: block;
+  color: var(--muted);
+  font-size: 0.94em;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+
+<h3><a href="/">CHARLIEGUDE.COM</a></h3>
+
+<hr>
+
+<h1>Charlie Gude</h1>
+<h4>Senior Software Engineer &mdash; Backend, Data Pipelines &amp; Python/Go</h4>
+
+<hr>
+
+<p><strong>Note</strong>: I build software for a living. Mostly the unglamorous kind &mdash; data pipelines, backend services, the stuff that has to work at 3am. I care about writing code that other people can read, shipping things that actually ship, and staying out of the way of the people using what I build. Twelve years in, I still think the interesting problems live in the boring parts of the stack.</p>
+
+<hr>
+
+<p class="contact">
+  <a href="mailto:gudetimes1234@gmail.com">Email</a>
+  <a href="https://github.com/">GitHub</a>
+  <a href="https://www.linkedin.com/">LinkedIn</a>
+</p>
+
+<hr>
+
+<h2>Where I've worked</h2>
+
+{{ range hugo.Data.roles }}
+<div class="role">
+  <div class="role-dates">{{ .dates }}</div>
+  <div class="role-body">
+    <strong class="company">{{ .company }}</strong>, {{ .role }}
+    <span class="desc">{{ .description }}</span>
+  </div>
+</div>
+{{ end }}
+
+</body>
+</html>

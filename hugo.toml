@@ -1,0 +1,11 @@
+baseURL = "https://charliegude.com/"
+languageCode = "en-us"
+title = "Charlie Gude"
+
+[params]
+  description = "Senior Software Engineer — Backend, Data Pipelines & Python/Go"
+
+disableKinds = ["taxonomy", "term"]
+
+[markup.goldmark.renderer]
+  unsafe = true

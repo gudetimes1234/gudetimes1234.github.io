@@ -1,40 +1,21 @@
-# Personal Site
+# charliegude.com
 
-A minimal personal website and blog built with Jekyll and the Tale theme.
+Personal site. Hugo, single page, no theme.
 
-## Setup
+## Local dev
 
-This site uses Jekyll with the Tale remote theme. To run locally:
-
-```bash
-bundle install
-bundle exec jekyll serve
+```
+hugo server
 ```
 
-Visit `http://localhost:4000` to preview the site.
+Visit http://localhost:1313
 
-## Customisation
+## Editing content
 
-- **Site info**: Edit `_config.yml` to update your name, bio, and social links
-- **Landing page**: Edit `index.md`
-- **Styles**: Add custom CSS to `assets/custom.css`
+- **Work history**: edit `data/roles.yaml`
+- **Layout / CSS**: edit `layouts/index.html`
+- **Site config**: edit `hugo.toml`
 
-## Writing Posts
+## Deploy
 
-Create markdown files in `_posts/` with the naming format: `YYYY-MM-DD-title.md`
-
-Example post:
-
-```markdown
----
-layout: post
-title: "My First Post"
-date: 2026-01-24
----
-
-Your content here...
-```
-
-## Deployment
-
-This site is automatically deployed to GitHub Pages when you push to the `master` branch.
+Auto-deploys to Vercel on push to main.
