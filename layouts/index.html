@@ -168,7 +168,7 @@ strong { font-weight: 500; }
 
 <h2>Where I've worked</h2>
 
-{{ range hugo.Data.roles }}
+{{ range .Site.Data.roles }}
 <div class="role">
   <div class="role-dates">{{ .dates }}</div>
   <div class="role-body">
